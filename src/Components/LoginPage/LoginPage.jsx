@@ -1,12 +1,10 @@
 import React from 'react';
 import './LoginPage.css';
-// import aa from '../Images/download.jpg';
 import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
     return (
         <>
-
             <section className="p-3 p-md-5 p-xl-5custom-container" style={{ backgroundColor: "#e5e5e5", minHeight: "100vh", width: "100%" }}>
                 <div className="col-12 col-md-6 mt-5 px-5 m-auto">
                     <div className="col-12">
@@ -54,9 +52,6 @@ const LoginPage = () => {
                     <path fill="#00cba9" fill-opacity="1" d="M0,0L80,20C160,40,320,80,480,100C640,120,800,120,960,100C1120,80,1280,40,1360,20L1440,0L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path>
                 </svg>
             </section>
-
-
-
         </>
     )
 }
