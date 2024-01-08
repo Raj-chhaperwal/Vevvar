@@ -4,6 +4,7 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 import './App.css';
 import LoginPage from "./Components/LoginPage/LoginPage";
 import Header from "./Components/Header";
+import Converter from "./Components/LoginPage/Converter";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -19,6 +20,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<LoginPage />}></Route>
                 <Route path="/Header" element={<Header />}></Route>
+                <Route path="/Converter" element={<Converter />}></Route>
               </Routes>
             </main>
           </div>
