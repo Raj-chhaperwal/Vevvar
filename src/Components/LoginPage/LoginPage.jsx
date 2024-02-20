@@ -1,8 +1,23 @@
-import React from 'react';
+import React , {useState} from 'react';
 import './LoginPage.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate(); // Hook to navigate
+
+    // Function to handle form submission
+    const handleSubmit = (e) => {
+        e.preventDefault(); // Prevent default form submission behavior
+
+        // Check if the email and password match the required values
+        if (email === 'vevvar@gmail.com' && password === '123456789') {
+            navigate('/header'); // Redirect to the header page
+        } else {
+            alert('Invalid email or password'); // Show error message
+        }
+    };
     return (
         <>
             <section className="p-3 p-md-5 p-xl-5custom-container" style={{ backgroundColor: "#e5e5e5", minHeight: "100vh", width: "100%" }}>
@@ -12,16 +27,16 @@ const LoginPage = () => {
                             <h1 className="text-center" style={{ fontFamily: "times", fontSize: "3rem", fontWeight: "500" }}>Vevaar</h1>
                         </div>
                     </div>
-                    <form action="#!">
+                    <form onSubmit={handleSubmit} action="#!">
                         <div className="row gy-3 px-5">
                             <div className="col-12">
                                 <div className="mb-2">
-                                    <input type="email" className="form-control" name="email" id="email" required placeholder='Login' />
+                                    <input type="email" className="form-control" name="email" id="email" required placeholder='Login' value={email} onChange={(e) => setEmail(e.target.value)} />
                                 </div>
                             </div>
                             <div className="col-12">
                                 <div className="mb-2">
-                                    <input type="password" className="form-control" name="password" id="password" required placeholder='Password' />
+                                    <input type="password" className="form-control" name="password" id="password" required placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}  />
                                 </div>
                                 <div className="col-12 d-flex justify-content-between align-items-center">
                                     <div className="form-check">

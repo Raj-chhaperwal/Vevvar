@@ -1,0 +1,61 @@
+/* Home.module.css */
+.uploadBox {
+  max-width: 600px;
+  margin: auto;
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+.button-custom {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.button-custom:hover {
+  background-color: #0056b3;
+}
+
+/* Home.module.css */
+
+.languageSelectContainer {
+  margin-top: 20px;
+  text-align: left;
+  max-width: 300px; /* Adjust based on your preference */
+  margin: 20px auto; /* Centering the container */
+}
+
+.languageSelectLabel {
+  display: block;
+  margin-bottom: 8px;
+  color: #3e4bffc3;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.languageSelect {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #29402a;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  appearance: none; /* Removes default system styling */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.languageSelect:hover,
+.languageSelect:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
